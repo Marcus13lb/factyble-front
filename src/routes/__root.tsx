@@ -77,14 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Factyble — Facturación electrónica DNIT/SIFEN para Paraguay" },
+      { name: "description", content: "Factyble es la app de facturación electrónica más simple para Paraguay. Emití facturas, notas de crédito y remisiones validadas por SIFEN en segundos." },
+      { name: "author", content: "Factyble" },
+      { property: "og:title", content: "Factyble — Facturación electrónica para Paraguay" },
+      { property: "og:description", content: "Emití facturas electrónicas DNIT/SIFEN en segundos. Multiempresa, dashboard y soporte local." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {

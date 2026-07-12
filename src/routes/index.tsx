@@ -418,8 +418,10 @@ function PhoneMockup() {
       <FloatCard className="absolute -right-2 top-16 sm:-right-16" icon={ShieldCheck} title="Seguridad" sub="de extremo a extremo" tint="orange" delay="0.3s" />
       <FloatCard className="absolute -right-2 bottom-16 sm:-right-16" icon={Cloud} title="Servicio oficial" sub="de WhatsApp (Meta)" tint="primary" delay="0.9s" />
 
-      {/* halo */}
-      <div className="absolute left-1/2 top-1/2 -z-10 h-[110%] w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-2xl" />
+      {/* gradient backdrop */}
+      <div className="absolute left-1/2 top-1/2 -z-20 h-[120%] w-[85%] -translate-x-1/2 -translate-y-1/2 rounded-[3rem] bg-gradient-to-br from-primary/40 via-[oklch(0.65_0.22_260)]/25 to-[oklch(0.55_0.18_285)]/30 blur-2xl" />
+      <div className="absolute left-1/2 top-1/2 -z-10 h-[110%] w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/15 blur-2xl" />
+      <div className="absolute left-1/2 top-1/2 -z-10 h-[90%] w-[55%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-tr from-primary/20 to-transparent opacity-60 blur-xl" />
 
       {/* phone frame */}
       <div className="relative mx-auto w-[260px] rounded-[2.5rem] border-[10px] border-[oklch(0.2_0.02_260)] bg-[oklch(0.2_0.02_260)] shadow-2xl shadow-primary/30 sm:w-[300px]">

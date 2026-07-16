@@ -69,11 +69,32 @@ function Landing() {
       </header>
 
       {/* Hero */}
-      <section id="inicio" className="relative overflow-hidden bg-gradient-to-br from-[#e8f7ff] via-[#f0faff] to-[#e0f2fe]">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_70%_60%_at_70%_20%,oklch(0.92_0.08_210/0.55),transparent_65%)]" />
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_80%,oklch(0.95_0.06_200/0.45),transparent_50%)]" />
-        <div className="absolute right-0 top-0 -z-10 hidden h-[32rem] w-[32rem] rounded-full bg-[oklch(0.88_0.10_220)] opacity-35 blur-3xl lg:block" />
-        <div className="absolute left-10 top-40 -z-10 hidden h-64 w-64 rounded-full bg-[oklch(0.88_0.10_195)] opacity-30 blur-3xl lg:block" />
+      <section id="inicio" className="relative overflow-hidden bg-gradient-to-br from-[#d6f0ff] via-[#e8f7ff] to-[#d0efff]">
+        {/* Gradient glows that extend behind the entire section */}
+        <div className="absolute inset-0 -z-20 bg-[radial-gradient(ellipse_80%_70%_at_75%_15%,oklch(0.78_0.16_210/0.65),transparent_60%)]" />
+        <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_15%_85%,oklch(0.82_0.14_200/0.55),transparent_50%)]" />
+        <div className="absolute inset-0 -z-20 bg-[radial-gradient(ellipse_60%_40%_at_50%_100%,oklch(0.85_0.12_210/0.45),transparent_60%)]" />
+
+        {/* Curvilinear pattern overlay */}
+        <div className="absolute inset-0 -z-10 overflow-hidden opacity-[0.65]">
+          <svg className="h-full w-full" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.5" />
+                <stop offset="50%" stopColor="#0ea5e9" stopOpacity="1" />
+                <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.5" />
+              </linearGradient>
+            </defs>
+            <path d="M-100,200 C200,100 500,350 800,250 C1100,150 1300,300 1600,200" fill="none" stroke="url(#waveGrad)" strokeWidth="3" />
+            <path d="M-100,320 C250,220 550,420 850,320 C1150,220 1350,380 1600,280" fill="none" stroke="#60a5fa" strokeWidth="2.5" opacity="0.7" />
+            <path d="M-100,450 C300,350 600,550 900,450 C1200,350 1400,500 1600,400" fill="none" stroke="url(#waveGrad)" strokeWidth="3" />
+            <path d="M-100,580 C200,500 500,680 800,580 C1100,480 1300,650 1600,550" fill="none" stroke="#93c5fd" strokeWidth="2.5" opacity="0.6" />
+            <path d="M-100,720 C250,620 600,800 950,720 C1250,640 1400,760 1600,680" fill="none" stroke="url(#waveGrad)" strokeWidth="3" />
+            <path d="M-100,120 C300,80 600,200 900,140 C1200,80 1400,180 1600,120" fill="none" stroke="#bfdbfe" strokeWidth="2" opacity="0.5" />
+            <ellipse cx="1200" cy="150" rx="260" ry="160" fill="#3b82f6" opacity="0.12" />
+            <ellipse cx="180" cy="760" rx="300" ry="200" fill="#0ea5e9" opacity="0.12" />
+          </svg>
+        </div>
 
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 pt-16 pb-24 lg:grid-cols-2 lg:pt-24">
           {/* Left */}
@@ -391,27 +412,23 @@ function FooterCol({ title, links }: { title: string; links: string[] }) {
 }
 
 function HeroMockup() {
-  const tiles = [
-    { title: "Emitir factura", tint: "bg-[oklch(0.94_0.05_260)]" },
-    { title: "Emitir nota de crédito", tint: "bg-[oklch(0.94_0.05_260)]" },
-    { title: "Emitir recibo", tint: "bg-[oklch(0.94_0.05_260)]" },
-    { title: "Facturas emitidas", tint: "bg-[oklch(0.94_0.05_260)]" },
-    { title: "Notas de crédito emitidas", tint: "bg-[oklch(0.94_0.05_260)]" },
-    { title: "Recibos emitidos", tint: "bg-[oklch(0.94_0.05_260)]" },
-  ];
-
   return (
     <div className="relative mx-auto w-full flex items-center justify-center lg:-mr-24 xl:-mr-40">
+      {/* Large ambient glow behind the mockup so it blends into the gradient */}
+      <div className="pointer-events-none absolute -inset-16 -z-10">
+        <div className="absolute inset-0 rounded-[5rem] bg-gradient-to-br from-[#93c5fd]/90 via-[#bfdbfe]/70 to-[#7dd3fc]/80 blur-[5rem]" />
+        <div className="absolute -inset-16 rounded-[6rem] bg-[radial-gradient(circle_at_50%_50%,#e0f2fe_0%,transparent_70%)] opacity-90 blur-3xl" />
+        <div className="absolute right-0 top-0 h-[28rem] w-[28rem] rounded-full bg-[#60a5fa]/60 blur-[7rem]" />
+      </div>
       <img
         src="/assets/notebookPhone.png"
         alt="Notebook y teléfono mostrando Factyble"
         loading="eager"
         decoding="sync"
         fetchPriority="high"
-        className="w-full h-auto max-w-none object-contain lg:w-[130%] xl:w-[140%] animate-fade-up"
+        className="relative z-10 w-full h-auto max-w-none object-contain lg:w-[130%] xl:w-[140%] animate-fade-up drop-shadow-2xl"
       />
     </div>
-
   );
 }
 

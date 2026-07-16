@@ -413,10 +413,11 @@ function FooterCol({ title, links }: { title: string; links: string[] }) {
 function HeroMockup() {
   return (
     <div className="relative mx-auto w-full flex items-center justify-center lg:-mr-24 xl:-mr-40">
-      {/* Soft glow behind the mockup so it blends into the gradient */}
-      <div className="absolute inset-0 -z-10 scale-110">
-        <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-br from-[#bfdbfe]/60 via-[#e0f2fe]/40 to-[#bae6fd]/50 blur-3xl" />
-        <div className="absolute -inset-8 rounded-[4rem] bg-[radial-gradient(circle_at_50%_50%,#e0f2fe,transparent_70%)] opacity-70 blur-2xl" />
+      {/* Large ambient glow behind the mockup so it blends into the gradient */}
+      <div className="pointer-events-none absolute -inset-12 -z-10">
+        <div className="absolute inset-0 rounded-[4rem] bg-gradient-to-br from-[#93c5fd]/70 via-[#bfdbfe]/50 to-[#7dd3fc]/60 blur-[4rem]" />
+        <div className="absolute -inset-12 rounded-[5rem] bg-[radial-gradient(circle_at_50%_50%,#e0f2fe_0%,transparent_70%)] opacity-90 blur-3xl" />
+        <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-[#60a5fa]/40 blur-[5rem]" />
       </div>
       <img
         src="/assets/notebookPhone.png"

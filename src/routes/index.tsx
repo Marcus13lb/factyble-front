@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-
+import notebookPhone from "/assets/notebookPhone.png";
 
 import {
   ArrowRight,
@@ -400,97 +400,14 @@ function HeroMockup() {
   ];
 
   return (
-    <div className="relative mx-auto w-full max-w-2xl animate-float-in">
-      {/* Backdrop gradient */}
-      <div className="absolute inset-0 -z-10 rounded-[3rem] bg-gradient-to-br from-primary/30 via-primary/15 to-[oklch(0.6_0.2_285)]/25 blur-3xl" />
-
-      {/* Laptop */}
-      <div className="relative">
-        {/* Screen */}
-        <div className="mx-auto rounded-t-2xl border-[10px] border-[oklch(0.18_0.02_260)] bg-[oklch(0.18_0.02_260)] shadow-2xl shadow-primary/25">
-          <div className="overflow-hidden rounded-md bg-background">
-            {/* App header */}
-            <div className="flex">
-              {/* sidebar */}
-              <div className="hidden w-1/4 flex-none flex-col gap-2 bg-primary px-3 py-4 text-primary-foreground sm:flex">
-                <div className="flex items-center gap-2 pb-2">
-                  <img src="/assets/factybleicon.png" alt="Factyble" className="h-4 w-4 object-contain" />
-                  <span className="text-[10px] font-extrabold tracking-wider">FACTYBLE</span>
-                </div>
-                {["Inicio", "Emitir factura", "Emitir nota de crédito", "Emitir recibo", "Facturas emitidas", "Notas de crédito emitidas", "Recibos emitidos"].map((l, i) => (
-                  <span key={l} className={`text-[9px] font-medium ${i === 0 ? "text-primary-foreground" : "text-primary-foreground/80"}`}>{l}</span>
-                ))}
-              </div>
-              {/* content */}
-              <div className="flex-1 bg-[oklch(0.98_0.005_260)] p-4">
-                <div className="mb-3 flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <img src="/assets/factybleicon.png" alt="" className="h-3.5 w-3.5 object-contain" />
-                    <span className="text-[10px] font-extrabold tracking-wider text-foreground">FACTYBLE</span>
-                  </div>
-                  <span className="text-[9px] text-muted-foreground">soporte@factyble.com</span>
-                </div>
-                <div className="grid grid-cols-3 gap-2">
-                  {tiles.map((t) => (
-                    <div key={t.title} className="flex flex-col items-center justify-center rounded-md border border-border bg-card p-2 shadow-sm">
-                      <div className={`mb-1.5 h-8 w-8 rounded ${t.tint}`} />
-                      <p className="text-center text-[8px] font-semibold leading-tight text-foreground">{t.title}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Laptop base */}
-        <div className="mx-auto h-2 w-[110%] -translate-x-[4.5%] rounded-b-2xl bg-[oklch(0.25_0.02_260)] shadow-xl" />
-        <div className="mx-auto -mt-1 h-1 w-[40%] rounded-b-full bg-[oklch(0.35_0.02_260)]" />
-      </div>
-
-      {/* Phone overlay */}
-      <div className="absolute -bottom-6 right-0 z-10 w-[180px] rotate-1 sm:-right-4 sm:w-[210px] md:-right-6 md:w-[230px]">
-        <div className="rounded-[1.8rem] border-[7px] border-[oklch(0.15_0.02_260)] bg-[oklch(0.15_0.02_260)] shadow-2xl shadow-primary/30">
-          <div className="relative overflow-hidden rounded-[1.3rem] bg-white">
-            <div className="absolute left-1/2 top-1.5 z-20 h-3 w-16 -translate-x-1/2 rounded-full bg-[oklch(0.15_0.02_260)]" />
-            <div className="flex items-center justify-between px-3 pt-2 pb-1 text-[8px] font-semibold text-foreground/80">
-              <span>08:59</span>
-              <span>●●●</span>
-            </div>
-            <div className="flex items-center gap-2 border-b border-black/5 px-3 py-2">
-              <ArrowRight className="h-3 w-3 rotate-180 text-muted-foreground" />
-              <div className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-[9px] font-bold text-primary-foreground">F</div>
-              <span className="text-[10px] font-semibold">Factyble</span>
-            </div>
-            <div className="space-y-2 bg-[oklch(0.96_0.008_100)] px-3 py-3">
-              <div className="mx-auto w-fit rounded bg-white px-1.5 py-0.5 text-[7px] text-muted-foreground shadow-sm">Hoy</div>
-              <div className="rounded-lg rounded-tl-sm bg-white p-2 text-[8px] leading-relaxed shadow-sm">
-                <p>¡Hola! 👋 Soy Facty, tu asistente de Factyble.</p>
-                <p className="mt-1">¿En qué puedo ayudarte hoy?</p>
-                <div className="mt-1.5 space-y-1">
-                  {["Emitir una factura", "Ver mis facturas", "Consultar notas de crédito", "Mis clientes"].map((o) => (
-                    <div key={o} className="rounded border border-primary/30 py-1 text-center text-[7px] font-semibold text-primary">
-                      {o}
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="rounded-lg rounded-tl-sm bg-white p-2 text-[8px] leading-relaxed shadow-sm">
-                <p>Perfecto, ¿a quién querés emitir la factura?</p>
-                <p className="mt-1">Podés escribirme el nombre, RUC o número de cédula.</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-1.5 border-t border-black/5 px-2 py-1.5">
-              <div className="flex flex-1 items-center gap-1 rounded-full bg-[oklch(0.96_0.008_260)] px-2 py-1 text-[8px] text-muted-foreground">
-                <span>🙂</span> Mensaje
-              </div>
-              <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[oklch(0.65_0.19_155)] text-white">
-                <MessageCircle className="h-3 w-3" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="relative mx-auto w-full max-w-none flex flex-col md:flex-row items-center justify-center gap-8">
+      <img
+        src="/assets/notebookPhone.png"
+        alt="Notebook y teléfono"
+        className="w-[1600px] h-auto object-contain"
+      />
     </div>
+
   );
 }
 

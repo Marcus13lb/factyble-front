@@ -80,17 +80,18 @@ function Landing() {
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs font-semibold text-primary">
               <CheckCircle className="h-3.5 w-3.5" /> Compatible con DNIT y SIFEN
             </span>
-            <h1 className="mt-6 text-3xl font-extrabold leading-[1.05] tracking-tight sm:text-3xl lg:text-4xl">
+            <h1 className="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
               Facturá desde{" "}
-              <span className="text-primary">WhatsApp.</span>
-              <br />
-              Simple, rápido y seguro.
+              <span className="text-primary">WhatsApp</span> o desde la web.
             </h1>
+            <p className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Simple, rápido y seguro.
+            </p>
 
             <p className="mt-6 max-w-xl text-base text-muted-foreground sm:text-lg">
               Factyble te permite emitir facturas, notas de crédito y consultar
-              documentos directamente desde WhatsApp. Todo en segundos, desde
-              donde estés.
+              documentos directamente desde WhatsApp o desde nuestra plataforma
+              web. Vos elegís cómo trabajar, nosotros nos encargamos del resto.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -101,17 +102,23 @@ function Landing() {
                 Probar gratis
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </a>
-
+              <a
+                href="#web"
+                className="group inline-flex items-center gap-2 rounded-xl border border-border bg-background px-6 py-3.5 text-sm font-semibold text-foreground transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg"
+              >
+                <Monitor className="h-4 w-4 text-primary" />
+                Ver versión web
+              </a>
             </div>
-            <div className="mt-6 flex flex-wrap gap-4 text-sm">
+            <div className="mt-8 flex flex-wrap gap-6 text-sm">
               <Perk icon={MessageCircle} title="Desde WhatsApp" sub="Sin apps adicionales" />
               <Perk icon={Lock} title="100% Seguro" sub="Tus datos protegidos" />
               <Perk icon={Zap} title="En segundos" sub="Facturá al instante" />
             </div>
           </div>
 
-          {/* Right: phone mockup */}
-          <PhoneMockup />
+          {/* Right: laptop + phone mockup */}
+          <HeroMockup />
         </div>
       </section>
 

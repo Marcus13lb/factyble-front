@@ -60,6 +60,13 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 }
+body {
+  background-image: url('/assets/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* mantiene el fondo estático al hacer scroll */
+  background-position: center;
+}
 
 :root {
   --radius: 0.75rem;

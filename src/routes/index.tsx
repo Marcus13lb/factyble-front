@@ -76,7 +76,7 @@ function Landing() {
         <div className="absolute inset-0 -z-20 bg-[radial-gradient(ellipse_60%_40%_at_50%_100%,oklch(0.85_0.12_210/0.45),transparent_60%)]" />
 
         {/* Curvilinear pattern overlay */}
-        <div className="absolute inset-0 -z-10 overflow-hidden opacity-[0.55]">
+        <div className="absolute inset-0 -z-10 overflow-hidden opacity-[0.65]">
           <svg className="h-full w-full" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -90,6 +90,7 @@ function Landing() {
             <path d="M-100,450 C300,350 600,550 900,450 C1200,350 1400,500 1600,400" fill="none" stroke="url(#waveGrad)" strokeWidth="3" />
             <path d="M-100,580 C200,500 500,680 800,580 C1100,480 1300,650 1600,550" fill="none" stroke="#93c5fd" strokeWidth="2.5" opacity="0.6" />
             <path d="M-100,720 C250,620 600,800 950,720 C1250,640 1400,760 1600,680" fill="none" stroke="url(#waveGrad)" strokeWidth="3" />
+            <path d="M-100,120 C300,80 600,200 900,140 C1200,80 1400,180 1600,120" fill="none" stroke="#bfdbfe" strokeWidth="2" opacity="0.5" />
             <ellipse cx="1200" cy="150" rx="260" ry="160" fill="#3b82f6" opacity="0.12" />
             <ellipse cx="180" cy="760" rx="300" ry="200" fill="#0ea5e9" opacity="0.12" />
           </svg>

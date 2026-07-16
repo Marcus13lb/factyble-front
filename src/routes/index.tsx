@@ -389,65 +389,103 @@ function FooterCol({ title, links }: { title: string; links: string[] }) {
   );
 }
 
-function PhoneMockup() {
+function HeroMockup() {
+  const tiles = [
+    { title: "Emitir factura", tint: "bg-[oklch(0.94_0.05_260)]" },
+    { title: "Emitir nota de crédito", tint: "bg-[oklch(0.94_0.05_260)]" },
+    { title: "Emitir recibo", tint: "bg-[oklch(0.94_0.05_260)]" },
+    { title: "Facturas emitidas", tint: "bg-[oklch(0.94_0.05_260)]" },
+    { title: "Notas de crédito emitidas", tint: "bg-[oklch(0.94_0.05_260)]" },
+    { title: "Recibos emitidos", tint: "bg-[oklch(0.94_0.05_260)]" },
+  ];
+
   return (
-    <div className="relative mx-auto w-full max-w-md animate-float-in">
-      {/* floating cards left */}
-      <FloatCard className="absolute -left-4 top-6 sm:-left-16" icon={FileText} title="Emití facturas" sub="en segundos" tint="primary" delay="0s" />
-      <FloatCard className="absolute -left-2 top-1/2 -translate-y-1/2 sm:-left-20" icon={Percent} title="Notas de crédito" sub="al instante" tint="violet" delay="0.6s" />
-      <FloatCard className="absolute -left-4 bottom-8 sm:-left-16" icon={Eye} title="Consultá tus" sub="documentos" tint="green" delay="1.2s" />
+    <div className="relative mx-auto w-full max-w-2xl animate-float-in">
+      {/* Backdrop gradient */}
+      <div className="absolute inset-0 -z-10 rounded-[3rem] bg-gradient-to-br from-primary/30 via-primary/15 to-[oklch(0.6_0.2_285)]/25 blur-3xl" />
 
-      {/* floating cards right */}
-      <FloatCard className="absolute -right-2 top-16 sm:-right-16" icon={ShieldCheck} title="Seguridad" sub="de extremo a extremo" tint="orange" delay="0.3s" />
-      <FloatCard className="absolute -right-2 bottom-16 sm:-right-16" icon={Cloud} title="Servicio oficial" sub="de WhatsApp (Meta)" tint="primary" delay="0.9s" />
+      {/* Laptop */}
+      <div className="relative">
+        {/* Screen */}
+        <div className="mx-auto rounded-t-2xl border-[10px] border-[oklch(0.18_0.02_260)] bg-[oklch(0.18_0.02_260)] shadow-2xl shadow-primary/25">
+          <div className="overflow-hidden rounded-md bg-background">
+            {/* App header */}
+            <div className="flex">
+              {/* sidebar */}
+              <div className="hidden w-1/4 flex-none flex-col gap-2 bg-primary px-3 py-4 text-primary-foreground sm:flex">
+                <div className="flex items-center gap-2 pb-2">
+                  <img src="/assets/factybleicon.png" alt="Factyble" className="h-4 w-4 object-contain" />
+                  <span className="text-[10px] font-extrabold tracking-wider">FACTYBLE</span>
+                </div>
+                {["Inicio", "Emitir factura", "Emitir nota de crédito", "Emitir recibo", "Facturas emitidas", "Notas de crédito emitidas", "Recibos emitidos"].map((l, i) => (
+                  <span key={l} className={`text-[9px] font-medium ${i === 0 ? "text-primary-foreground" : "text-primary-foreground/80"}`}>{l}</span>
+                ))}
+              </div>
+              {/* content */}
+              <div className="flex-1 bg-[oklch(0.98_0.005_260)] p-4">
+                <div className="mb-3 flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <img src="/assets/factybleicon.png" alt="" className="h-3.5 w-3.5 object-contain" />
+                    <span className="text-[10px] font-extrabold tracking-wider text-foreground">FACTYBLE</span>
+                  </div>
+                  <span className="text-[9px] text-muted-foreground">soporte@factyble.com</span>
+                </div>
+                <div className="grid grid-cols-3 gap-2">
+                  {tiles.map((t) => (
+                    <div key={t.title} className="flex flex-col items-center justify-center rounded-md border border-border bg-card p-2 shadow-sm">
+                      <div className={`mb-1.5 h-8 w-8 rounded ${t.tint}`} />
+                      <p className="text-center text-[8px] font-semibold leading-tight text-foreground">{t.title}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Laptop base */}
+        <div className="mx-auto h-2 w-[110%] -translate-x-[4.5%] rounded-b-2xl bg-[oklch(0.25_0.02_260)] shadow-xl" />
+        <div className="mx-auto -mt-1 h-1 w-[40%] rounded-b-full bg-[oklch(0.35_0.02_260)]" />
+      </div>
 
-      {/* halo */}
-      <div className="absolute left-1/2 top-1/2 -z-10 h-[110%] w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-2xl" />
-
-      {/* phone frame */}
-      <div className="relative mx-auto w-[260px] rounded-[2.5rem] border-[10px] border-[oklch(0.2_0.02_260)] bg-[oklch(0.2_0.02_260)] shadow-2xl shadow-primary/30 sm:w-[300px]">
-        <div className="absolute left-1/2 top-2 z-20 h-5 w-24 -translate-x-1/2 rounded-full bg-[oklch(0.15_0.02_260)]" />
-        <div className="overflow-hidden rounded-[1.8rem] bg-[oklch(0.97_0.005_260)]">
-          {/* status bar */}
-          <div className="flex items-center justify-between px-5 pt-3 pb-1 text-[10px] font-semibold text-foreground/80">
-            <span>08:59</span>
-            <span className="flex items-center gap-1">
+      {/* Phone overlay */}
+      <div className="absolute -bottom-6 right-0 z-10 w-[180px] rotate-1 sm:-right-4 sm:w-[210px] md:-right-6 md:w-[230px]">
+        <div className="rounded-[1.8rem] border-[7px] border-[oklch(0.15_0.02_260)] bg-[oklch(0.15_0.02_260)] shadow-2xl shadow-primary/30">
+          <div className="relative overflow-hidden rounded-[1.3rem] bg-white">
+            <div className="absolute left-1/2 top-1.5 z-20 h-3 w-16 -translate-x-1/2 rounded-full bg-[oklch(0.15_0.02_260)]" />
+            <div className="flex items-center justify-between px-3 pt-2 pb-1 text-[8px] font-semibold text-foreground/80">
+              <span>08:59</span>
               <span>●●●</span>
-              <span>📶</span>
-            </span>
-          </div>
-          {/* wa header */}
-          <div className="flex items-center gap-3 border-b border-black/5 bg-white px-4 py-3">
-            <ArrowRight className="h-4 w-4 rotate-180 text-muted-foreground" />
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold">F</div>
-            <div className="flex items-center gap-1">
-              <span className="text-sm font-semibold text-foreground">Factyble</span>
-              <span className="flex h-3.5 w-3.5 items-center justify-center rounded-full bg-[oklch(0.65_0.19_155)] text-[8px] text-white">✓</span>
             </div>
-          </div>
-          {/* chat */}
-          <div className="space-y-3 bg-[oklch(0.96_0.008_100)] px-4 py-5">
-            <div className="mx-auto w-fit rounded-md bg-white px-2 py-0.5 text-[10px] text-muted-foreground shadow-sm">Hoy</div>
-            <div className="rounded-2xl rounded-tl-sm bg-white p-3 text-[12px] leading-relaxed text-foreground shadow-sm">
-              <p>¡Hola! 👋 Bienvenido a Factyble.</p>
-              <p className="mt-2">Seleccioná la operación que querés realizar:</p>
-              <ul className="mt-2 space-y-1">
-                <li className="flex items-center gap-2"><span className="flex h-4 w-4 items-center justify-center rounded-sm bg-primary text-[9px] font-bold text-white">1</span> Emitir factura</li>
-                <li className="flex items-center gap-2"><span className="flex h-4 w-4 items-center justify-center rounded-sm bg-primary text-[9px] font-bold text-white">2</span> Emitir nota de crédito</li>
-                <li className="flex items-center gap-2"><span className="flex h-4 w-4 items-center justify-center rounded-sm bg-primary text-[9px] font-bold text-white">3</span> Consultar factura</li>
-                <li className="flex items-center gap-2"><span className="flex h-4 w-4 items-center justify-center rounded-sm bg-primary text-[9px] font-bold text-white">4</span> Consultar nota de crédito</li>
-              </ul>
-              <p className="mt-2">Respondé con el número de la opción elegida.</p>
-              <p className="mt-1 text-right text-[9px] text-muted-foreground">16:47</p>
+            <div className="flex items-center gap-2 border-b border-black/5 px-3 py-2">
+              <ArrowRight className="h-3 w-3 rotate-180 text-muted-foreground" />
+              <div className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-[9px] font-bold text-primary-foreground">F</div>
+              <span className="text-[10px] font-semibold">Factyble</span>
             </div>
-          </div>
-          {/* input */}
-          <div className="flex items-center gap-2 border-t border-black/5 bg-white px-3 py-2.5">
-            <div className="flex flex-1 items-center gap-2 rounded-full bg-[oklch(0.96_0.008_260)] px-3 py-1.5 text-[11px] text-muted-foreground">
-              <span>🙂</span> Mensaje
+            <div className="space-y-2 bg-[oklch(0.96_0.008_100)] px-3 py-3">
+              <div className="mx-auto w-fit rounded bg-white px-1.5 py-0.5 text-[7px] text-muted-foreground shadow-sm">Hoy</div>
+              <div className="rounded-lg rounded-tl-sm bg-white p-2 text-[8px] leading-relaxed shadow-sm">
+                <p>¡Hola! 👋 Soy Facty, tu asistente de Factyble.</p>
+                <p className="mt-1">¿En qué puedo ayudarte hoy?</p>
+                <div className="mt-1.5 space-y-1">
+                  {["Emitir una factura", "Ver mis facturas", "Consultar notas de crédito", "Mis clientes"].map((o) => (
+                    <div key={o} className="rounded border border-primary/30 py-1 text-center text-[7px] font-semibold text-primary">
+                      {o}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="rounded-lg rounded-tl-sm bg-white p-2 text-[8px] leading-relaxed shadow-sm">
+                <p>Perfecto, ¿a quién querés emitir la factura?</p>
+                <p className="mt-1">Podés escribirme el nombre, RUC o número de cédula.</p>
+              </div>
             </div>
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[oklch(0.65_0.19_155)] text-white">
-              <MessageCircle className="h-4 w-4" />
+            <div className="flex items-center gap-1.5 border-t border-black/5 px-2 py-1.5">
+              <div className="flex flex-1 items-center gap-1 rounded-full bg-[oklch(0.96_0.008_260)] px-2 py-1 text-[8px] text-muted-foreground">
+                <span>🙂</span> Mensaje
+              </div>
+              <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[oklch(0.65_0.19_155)] text-white">
+                <MessageCircle className="h-3 w-3" />
+              </div>
             </div>
           </div>
         </div>
@@ -456,39 +494,3 @@ function PhoneMockup() {
   );
 }
 
-function FloatCard({
-  className,
-  icon: Icon,
-  title,
-  sub,
-  tint,
-  delay,
-}: {
-  className: string;
-  icon: React.ElementType;
-  title: string;
-  sub: string;
-  tint: string;
-  delay: string;
-}) {
-  const palette: Record<string, string> = {
-    primary: "bg-primary/10 text-primary",
-    violet: "bg-[oklch(0.94_0.06_290)] text-[oklch(0.5_0.22_290)]",
-    green: "bg-[oklch(0.94_0.09_155)] text-[oklch(0.5_0.16_155)]",
-    orange: "bg-[oklch(0.95_0.09_60)] text-[oklch(0.6_0.18_50)]",
-  };
-  return (
-    <div
-      className={`${className} z-10 hidden items-center gap-2.5 rounded-2xl border border-border bg-card px-3 py-2.5 shadow-lg shadow-primary/10 animate-float-y md:flex`}
-      style={{ animationDelay: delay }}
-    >
-      <div className={`flex h-9 w-9 flex-none items-center justify-center rounded-xl ${palette[tint] ?? palette.primary}`}>
-        <Icon className="h-4 w-4" />
-      </div>
-      <div className="min-w-0">
-        <p className="text-xs font-bold leading-tight">{title}</p>
-        <p className="text-[10px] text-muted-foreground">{sub}</p>
-      </div>
-    </div>
-  );
-}

@@ -12,7 +12,6 @@ import {
   MessageCircle,
   Lock,
   Zap,
-  Play,
   Users,
   BarChart3,
   Headphones,
@@ -20,6 +19,7 @@ import {
   Mail,
   MapPin,
   CheckCircle,
+  Monitor,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({

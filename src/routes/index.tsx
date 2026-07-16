@@ -400,11 +400,14 @@ function HeroMockup() {
   ];
 
   return (
-    <div className="relative mx-auto w-full max-w-none flex flex-col md:flex-row items-center justify-center gap-8">
+    <div className="relative mx-auto w-full flex items-center justify-center lg:-mr-24 xl:-mr-40">
       <img
         src="/assets/notebookPhone.png"
-        alt="Notebook y teléfono"
-        className="w-[1600px] h-auto object-contain"
+        alt="Notebook y teléfono mostrando Factyble"
+        loading="eager"
+        decoding="sync"
+        fetchPriority="high"
+        className="w-full h-auto max-w-none object-contain lg:w-[130%] xl:w-[140%] animate-fade-up"
       />
     </div>
 

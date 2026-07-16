@@ -425,10 +425,8 @@ function HeroMockup() {
         loading="eager"
         decoding="sync"
         fetchPriority="high"
-        className="relative z-10 w-full h-auto max-w-none object-contain lg:w-[130%] xl:w-[140%] animate-fade-up mix-blend-multiply"
+        className="relative z-10 w-full h-auto max-w-none object-contain lg:w-[130%] xl:w-[140%] animate-fade-up drop-shadow-2xl"
       />
-      {/* Edge vignette so the image background fades into the section gradient */}
-      <div className="pointer-events-none absolute inset-0 z-20 rounded-[2rem] bg-[radial-gradient(ellipse_at_center,transparent_50%,rgba(191,219,254,0.9)_100%)]" />
     </div>
   );
 }

@@ -124,23 +124,22 @@ function Landing() {
 
       {/* Beneficios */}
       <section id="beneficios" className="mx-auto max-w-7xl px-6 py-24">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary">Beneficios clave</p>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
-            Todo lo que necesitás en un solo chat
+            Todo lo que necesitás en un solo chat o en la web
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Sin instalar apps. Sin complicaciones. Solo escribí y facturá.
+            Sin instalar apps. Sin complicaciones. Solo escribís y facturás o gestionás desde la web.
           </p>
         </div>
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
           {[
-            { icon: FileText, color: "primary", title: "Emití facturas", desc: "Generá facturas electrónicas en segundos desde el chat." },
-            { icon: Percent, color: "violet", title: "Notas de crédito al instante", desc: "Ajustes y anulaciones respondiendo un mensaje." },
-            { icon: Eye, color: "green", title: "Consultá tus documentos", desc: "Buscá y descargá cualquier factura al instante." },
-            { icon: ShieldCheck, color: "orange", title: "Seguridad de extremo a extremo", desc: "Cifrado E2E. Tus datos y los de tus clientes, siempre protegidos." },
-            { icon: Cloud, color: "primary", title: "Servicio oficial de WhatsApp (Meta)", desc: "Integración certificada por Meta. Confianza y estabilidad garantizadas." },
-            { icon: Zap, color: "violet", title: "Automatización total", desc: "Recordatorios, envíos y reportes trabajando por vos." },
+            { icon: FileText, color: "primary", title: "Emití facturas", desc: "Enviá facturas electrónicas en segundos, desde donde estés." },
+            { icon: Percent, color: "violet", title: "Notas de crédito", desc: "Generá y enviá notas de crédito de forma rápida y segura." },
+            { icon: Eye, color: "green", title: "Consultá documentos", desc: "Accedé a tus facturas y documentos emitidos en cualquier momento." },
+            { icon: Users, color: "orange", title: "Clientes y productos", desc: "Gestioná tu base de clientes y productos fácilmente." },
+            { icon: BarChart3, color: "primary", title: "Reportes en la web", desc: "Visualizá reportes y estadísticas desde nuestra plataforma web." },
           ].map(({ icon: Icon, color, title, desc }) => (
             <BenefitCard key={title} icon={Icon} color={color} title={title} desc={desc} />
           ))}

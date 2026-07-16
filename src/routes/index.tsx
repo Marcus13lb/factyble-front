@@ -69,10 +69,11 @@ function Landing() {
       </header>
 
       {/* Hero */}
-      <section id="inicio" className="relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,oklch(0.92_0.08_260/0.6),transparent_70%)]" />
-        <div className="absolute right-0 top-20 -z-10 hidden h-64 w-64 rounded-full bg-[oklch(0.85_0.12_290)] opacity-20 blur-3xl lg:block" />
-        <div className="absolute left-10 top-60 -z-10 hidden h-48 w-48 rounded-full bg-[oklch(0.85_0.15_60)] opacity-20 blur-3xl lg:block" />
+      <section id="inicio" className="relative overflow-hidden bg-gradient-to-br from-[#e8f7ff] via-[#f0faff] to-[#e0f2fe]">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_70%_60%_at_70%_20%,oklch(0.92_0.08_210/0.55),transparent_65%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_80%,oklch(0.95_0.06_200/0.45),transparent_50%)]" />
+        <div className="absolute right-0 top-0 -z-10 hidden h-[32rem] w-[32rem] rounded-full bg-[oklch(0.88_0.10_220)] opacity-35 blur-3xl lg:block" />
+        <div className="absolute left-10 top-40 -z-10 hidden h-64 w-64 rounded-full bg-[oklch(0.88_0.10_195)] opacity-30 blur-3xl lg:block" />
 
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 pt-16 pb-24 lg:grid-cols-2 lg:pt-24">
           {/* Left */}

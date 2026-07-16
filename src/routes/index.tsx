@@ -414,10 +414,10 @@ function HeroMockup() {
   return (
     <div className="relative mx-auto w-full flex items-center justify-center lg:-mr-24 xl:-mr-40">
       {/* Large ambient glow behind the mockup so it blends into the gradient */}
-      <div className="pointer-events-none absolute -inset-12 -z-10">
-        <div className="absolute inset-0 rounded-[4rem] bg-gradient-to-br from-[#93c5fd]/80 via-[#bfdbfe]/60 to-[#7dd3fc]/70 blur-[4rem]" />
-        <div className="absolute -inset-12 rounded-[5rem] bg-[radial-gradient(circle_at_50%_50%,#e0f2fe_0%,transparent_70%)] opacity-90 blur-3xl" />
-        <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-[#60a5fa]/50 blur-[6rem]" />
+      <div className="pointer-events-none absolute -inset-16 -z-10">
+        <div className="absolute inset-0 rounded-[5rem] bg-gradient-to-br from-[#93c5fd]/90 via-[#bfdbfe]/70 to-[#7dd3fc]/80 blur-[5rem]" />
+        <div className="absolute -inset-16 rounded-[6rem] bg-[radial-gradient(circle_at_50%_50%,#e0f2fe_0%,transparent_70%)] opacity-90 blur-3xl" />
+        <div className="absolute right-0 top-0 h-[28rem] w-[28rem] rounded-full bg-[#60a5fa]/60 blur-[7rem]" />
       </div>
       <img
         src="/assets/notebookPhone.png"
@@ -428,7 +428,7 @@ function HeroMockup() {
         className="relative z-10 w-full h-auto max-w-none object-contain lg:w-[130%] xl:w-[140%] animate-fade-up drop-shadow-2xl"
       />
       {/* Edge vignette so the image background fades into the section gradient */}
-      <div className="pointer-events-none absolute inset-0 z-20 rounded-[2rem] bg-[radial-gradient(ellipse_at_center,transparent_55%,rgba(191,219,254,0.75)_100%)]" />
+      <div className="pointer-events-none absolute inset-0 z-20 rounded-[2rem] bg-[radial-gradient(ellipse_at_center,transparent_50%,rgba(191,219,254,0.9)_100%)]" />
     </div>
   );
 }

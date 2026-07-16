@@ -411,27 +411,22 @@ function FooterCol({ title, links }: { title: string; links: string[] }) {
 }
 
 function HeroMockup() {
-  const tiles = [
-    { title: "Emitir factura", tint: "bg-[oklch(0.94_0.05_260)]" },
-    { title: "Emitir nota de crédito", tint: "bg-[oklch(0.94_0.05_260)]" },
-    { title: "Emitir recibo", tint: "bg-[oklch(0.94_0.05_260)]" },
-    { title: "Facturas emitidas", tint: "bg-[oklch(0.94_0.05_260)]" },
-    { title: "Notas de crédito emitidas", tint: "bg-[oklch(0.94_0.05_260)]" },
-    { title: "Recibos emitidos", tint: "bg-[oklch(0.94_0.05_260)]" },
-  ];
-
   return (
     <div className="relative mx-auto w-full flex items-center justify-center lg:-mr-24 xl:-mr-40">
+      {/* Soft glow behind the mockup so it blends into the gradient */}
+      <div className="absolute inset-0 -z-10 scale-110">
+        <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-br from-[#bfdbfe]/60 via-[#e0f2fe]/40 to-[#bae6fd]/50 blur-3xl" />
+        <div className="absolute -inset-8 rounded-[4rem] bg-[radial-gradient(circle_at_50%_50%,#e0f2fe,transparent_70%)] opacity-70 blur-2xl" />
+      </div>
       <img
         src="/assets/notebookPhone.png"
         alt="Notebook y teléfono mostrando Factyble"
         loading="eager"
         decoding="sync"
         fetchPriority="high"
-        className="w-full h-auto max-w-none object-contain lg:w-[130%] xl:w-[140%] animate-fade-up"
+        className="relative z-10 w-full h-auto max-w-none object-contain lg:w-[130%] xl:w-[140%] animate-fade-up drop-shadow-2xl"
       />
     </div>
-
   );
 }
 

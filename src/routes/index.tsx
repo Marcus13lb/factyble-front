@@ -71,27 +71,27 @@ function Landing() {
       {/* Hero */}
       <section id="inicio" className="relative overflow-hidden bg-gradient-to-br from-[#e6f6ff] via-[#f0faff] to-[#e0f4ff]">
         {/* Gradient glows that extend behind the entire section */}
-        <div className="absolute inset-0 -z-20 bg-[radial-gradient(ellipse_80%_70%_at_75%_15%,oklch(0.88_0.10_210/0.55),transparent_60%)]" />
-        <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_15%_85%,oklch(0.92_0.08_200/0.45),transparent_50%)]" />
-        <div className="absolute inset-0 -z-20 bg-[radial-gradient(ellipse_60%_40%_at_50%_100%,oklch(0.95_0.06_210/0.35),transparent_60%)]" />
+        <div className="absolute inset-0 -z-20 bg-[radial-gradient(ellipse_80%_70%_at_75%_15%,oklch(0.85_0.12_210/0.55),transparent_60%)]" />
+        <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_15%_85%,oklch(0.90_0.10_200/0.45),transparent_50%)]" />
+        <div className="absolute inset-0 -z-20 bg-[radial-gradient(ellipse_60%_40%_at_50%_100%,oklch(0.93_0.08_210/0.35),transparent_60%)]" />
 
         {/* Curvilinear pattern overlay */}
-        <div className="absolute inset-0 -z-10 overflow-hidden opacity-[0.18]">
+        <div className="absolute inset-0 -z-10 overflow-hidden opacity-[0.28]">
           <svg className="h-full w-full" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.2" />
-                <stop offset="50%" stopColor="#0ea5e9" stopOpacity="0.6" />
-                <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.2" />
+                <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.3" />
+                <stop offset="50%" stopColor="#0ea5e9" stopOpacity="0.8" />
+                <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.3" />
               </linearGradient>
             </defs>
-            <path d="M-100,200 C200,100 500,350 800,250 C1100,150 1300,300 1600,200" fill="none" stroke="url(#waveGrad)" strokeWidth="1.5" />
-            <path d="M-100,320 C250,220 550,420 850,320 C1150,220 1350,380 1600,280" fill="none" stroke="#60a5fa" strokeWidth="1" opacity="0.5" />
-            <path d="M-100,450 C300,350 600,550 900,450 C1200,350 1400,500 1600,400" fill="none" stroke="url(#waveGrad)" strokeWidth="1.5" />
-            <path d="M-100,580 C200,500 500,680 800,580 C1100,480 1300,650 1600,550" fill="none" stroke="#93c5fd" strokeWidth="1" opacity="0.4" />
-            <path d="M-100,720 C250,620 600,800 950,720 C1250,640 1400,760 1600,680" fill="none" stroke="url(#waveGrad)" strokeWidth="1.5" />
-            <ellipse cx="1200" cy="150" rx="180" ry="120" fill="#3b82f6" opacity="0.04" />
-            <ellipse cx="200" cy="750" rx="220" ry="160" fill="#0ea5e9" opacity="0.04" />
+            <path d="M-100,200 C200,100 500,350 800,250 C1100,150 1300,300 1600,200" fill="none" stroke="url(#waveGrad)" strokeWidth="2" />
+            <path d="M-100,320 C250,220 550,420 850,320 C1150,220 1350,380 1600,280" fill="none" stroke="#60a5fa" strokeWidth="1.5" opacity="0.6" />
+            <path d="M-100,450 C300,350 600,550 900,450 C1200,350 1400,500 1600,400" fill="none" stroke="url(#waveGrad)" strokeWidth="2" />
+            <path d="M-100,580 C200,500 500,680 800,580 C1100,480 1300,650 1600,550" fill="none" stroke="#93c5fd" strokeWidth="1.5" opacity="0.5" />
+            <path d="M-100,720 C250,620 600,800 950,720 C1250,640 1400,760 1600,680" fill="none" stroke="url(#waveGrad)" strokeWidth="2" />
+            <ellipse cx="1200" cy="150" rx="180" ry="120" fill="#3b82f6" opacity="0.06" />
+            <ellipse cx="200" cy="750" rx="220" ry="160" fill="#0ea5e9" opacity="0.06" />
           </svg>
         </div>
 

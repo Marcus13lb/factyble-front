@@ -72,7 +72,7 @@ function Landing() {
       {/* Hero */}
       <section id="inicio" className="relative overflow-hidden">
 
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 pt-16 pb-24 lg:grid-cols-2 lg:pt-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 pt-10 pb-16 sm:gap-12 sm:px-6 sm:pt-16 sm:pb-24 lg:grid-cols-2 lg:pt-24">
           {/* Left */}
           <div className="animate-fade-up">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs font-semibold text-primary">

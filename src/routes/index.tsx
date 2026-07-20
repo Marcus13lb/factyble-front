@@ -44,7 +44,7 @@ function Landing() {
     <div className="min-h-screen overflow-x-hidden bg-[url('/assets/background.png')] bg-cover bg-center bg-fixed bg-no-repeat">
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:gap-6 sm:px-6 sm:py-4">
           <Logo />
           <nav className="hidden items-center gap-8 text-sm font-medium text-muted-foreground lg:flex">
             <a href="#inicio" className="text-primary">Inicio</a>
@@ -54,18 +54,19 @@ function Landing() {
             <a href="#integraciones" className="transition-colors hover:text-foreground">Integraciones</a>
             <a href="#contacto" className="transition-colors hover:text-foreground">Contacto</a>
           </nav>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <a href="#login" className="hidden text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:inline">
               Iniciar sesión
             </a>
             <a
               href="#demo"
-              className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/40"
+              className="inline-flex items-center gap-1.5 rounded-xl bg-primary px-3 py-2 text-xs font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/40 sm:gap-2 sm:px-5 sm:py-2.5 sm:text-sm"
             >
-              Solicitar demo <ArrowRight className="h-4 w-4" />
+              Solicitar demo <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
             </a>
           </div>
         </div>
+
       </header>
 
       {/* Hero */}

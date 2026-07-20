@@ -41,7 +41,7 @@ function Logo() {
 
 function Landing() {
   return (
-    <div className="min-h-screen bg-[url('/assets/background.png')] bg-cover bg-center bg-fixed bg-no-repeat">
+    <div className="min-h-screen overflow-x-hidden bg-[url('/assets/background.png')] bg-cover bg-center bg-fixed bg-no-repeat">
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4">

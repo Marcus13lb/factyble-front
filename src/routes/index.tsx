@@ -72,9 +72,9 @@ function Landing() {
       {/* Hero */}
       <section id="inicio" className="relative overflow-hidden">
 
-        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 pt-10 pb-16 sm:gap-12 sm:px-6 sm:pt-16 sm:pb-24 lg:grid-cols-2 lg:pt-24">
+        <div className="mx-auto grid w-full items-center gap-8 px-0 pt-10 pb-16 sm:gap-12 sm:pt-16 sm:pb-24 lg:grid-cols-2 lg:pt-24">
           {/* Left */}
-          <div className="animate-fade-up">
+          <div className="animate-fade-up pl-4 sm:pl-6 lg:pl-10">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs font-semibold text-primary">
               <CheckCircle className="h-3.5 w-3.5" /> Compatible con DNIT y SIFEN
             </span>
@@ -390,14 +390,14 @@ function FooterCol({ title, links }: { title: string; links: string[] }) {
 
 function HeroMockup() {
   return (
-    <div className="relative mx-auto w-full max-w-xl flex items-center justify-center lg:max-w-none lg:-mr-16 xl:-mr-40 animate-float drop-shadow-2xl">
+    <div className="relative mx-auto w-full max-w-xl flex items-center justify-center lg:max-w-4xl xl:max-w-5xl animate-float drop-shadow-2xl">
       <img
         src="/assets/notebookPhone.png"
         alt="Notebook y teléfono mostrando Factyble"
         loading="eager"
         decoding="sync"
         fetchPriority="high"
-        className="relative z-10 w-full h-auto object-contain lg:w-[120%] xl:w-[140%] animate-fade-up drop-shadow-2xl"
+        className="relative z-10 w-full h-auto object-contain animate-fade-up drop-shadow-2xl"
       />
     </div>
   );

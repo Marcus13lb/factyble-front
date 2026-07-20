@@ -390,16 +390,17 @@ function FooterCol({ title, links }: { title: string; links: string[] }) {
 
 function HeroMockup() {
   return (
-    <div className="relative mx-auto w-full flex items-center justify-center lg:-mr-24 xl:-mr-40 object-contain animate-float drop-shadow-2xl">
+    <div className="relative mx-auto w-full max-w-xl flex items-center justify-center lg:max-w-none lg:-mr-16 xl:-mr-40 animate-float drop-shadow-2xl">
       <img
         src="/assets/notebookPhone.png"
         alt="Notebook y teléfono mostrando Factyble"
         loading="eager"
         decoding="sync"
         fetchPriority="high"
-        className="relative z-10 w-full h-auto max-w-none object-contain lg:w-[130%] xl:w-[140%] animate-fade-up drop-shadow-2xl"
+        className="relative z-10 w-full h-auto object-contain lg:w-[120%] xl:w-[140%] animate-fade-up drop-shadow-2xl"
       />
     </div>
   );
 }
+
 

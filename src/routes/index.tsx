@@ -122,7 +122,7 @@ function Landing() {
       </section>
 
       {/* Beneficios */}
-      <section id="beneficios" className="mx-auto max-w-7xl px-6 py-24">
+      <section id="beneficios" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary">Beneficios clave</p>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
@@ -147,7 +147,7 @@ function Landing() {
 
       {/* Características */}
       <section id="caracteristicas" className="border-t border-border bg-gradient-to-b from-card/40 to-background">
-        <div className="mx-auto max-w-7xl px-6 py-24">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-widest text-primary">Todo lo que necesitás</p>
@@ -200,7 +200,7 @@ function Landing() {
 
       {/* Stats */}
       <section className="border-t border-border">
-        <div className="mx-auto max-w-7xl px-6 py-16">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { icon: Users, value: "+10.000", label: "Empresas confían en nosotros" },
@@ -224,7 +224,7 @@ function Landing() {
 
       {/* Precios */}
       <section id="precios" className="border-t border-border bg-card/40">
-        <div className="mx-auto max-w-6xl px-6 py-24">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-semibold uppercase tracking-widest text-primary">Precios</p>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
@@ -277,7 +277,7 @@ function Landing() {
 
       {/* CTA */}
       <section id="trial" className="border-t border-border">
-        <div className="mx-auto max-w-5xl px-6 py-20">
+        <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20">
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary to-[oklch(0.55_0.22_285)] p-10 text-center shadow-2xl shadow-primary/30 sm:p-16">
             <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-white/10 blur-2xl" />
             <div className="absolute -left-10 bottom-0 h-48 w-48 rounded-full bg-[oklch(0.85_0.15_60)]/30 blur-2xl" />
@@ -299,7 +299,7 @@ function Landing() {
 
       {/* Footer */}
       <footer id="contacto" className="border-t border-border bg-card/40">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 sm:py-16 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <Logo />
             <p className="mt-4 max-w-xs text-sm text-muted-foreground">

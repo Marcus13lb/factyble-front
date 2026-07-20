@@ -78,13 +78,14 @@ function Landing() {
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs font-semibold text-primary">
               <CheckCircle className="h-3.5 w-3.5" /> Compatible con DNIT y SIFEN
             </span>
-            <h1 className="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 text-3xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
               Facturá desde{" "}
               <span className="text-primary">WhatsApp</span> o desde la web.
             </h1>
-            <p className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <p className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-4xl">
               Simple, rápido y seguro.
             </p>
+
 
             <p className="mt-6 max-w-xl text-base text-muted-foreground sm:text-lg">
               Factyble te permite emitir facturas, notas de crédito y consultar

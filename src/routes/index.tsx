@@ -73,7 +73,7 @@ function Landing() {
 
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 pt-16 pb-24 lg:grid-cols-2 lg:pt-24">
           {/* Left */}
-          <div className="animate-fade-up">
+          <div className="animate-fade-up pl-4 sm:pl-6 lg:pl-10">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs font-semibold text-primary">
               <CheckCircle className="h-3.5 w-3.5" /> Compatible con DNIT y SIFEN
             </span>

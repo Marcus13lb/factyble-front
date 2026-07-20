@@ -41,10 +41,10 @@ function Logo() {
 
 function Landing() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[url('/assets/background.png')] bg-cover bg-center bg-fixed bg-no-repeat">
+    <div className="min-h-screen bg-[url('/assets/background.png')] bg-cover bg-center bg-fixed bg-no-repeat">
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:gap-6 sm:px-6 sm:py-4">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4">
           <Logo />
           <nav className="hidden items-center gap-8 text-sm font-medium text-muted-foreground lg:flex">
             <a href="#inicio" className="text-primary">Inicio</a>
@@ -54,38 +54,36 @@ function Landing() {
             <a href="#integraciones" className="transition-colors hover:text-foreground">Integraciones</a>
             <a href="#contacto" className="transition-colors hover:text-foreground">Contacto</a>
           </nav>
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center gap-3">
             <a href="#login" className="hidden text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:inline">
               Iniciar sesión
             </a>
             <a
               href="#demo"
-              className="inline-flex items-center gap-1.5 rounded-xl bg-primary px-3 py-2 text-xs font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/40 sm:gap-2 sm:px-5 sm:py-2.5 sm:text-sm"
+              className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/40"
             >
-              Solicitar demo <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+              Solicitar demo <ArrowRight className="h-4 w-4" />
             </a>
           </div>
         </div>
-
       </header>
 
       {/* Hero */}
       <section id="inicio" className="relative overflow-hidden">
 
-        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 pt-10 pb-16 sm:gap-12 sm:px-6 sm:pt-16 sm:pb-24 lg:grid-cols-2 lg:pt-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 pt-16 pb-24 lg:grid-cols-2 lg:pt-24">
           {/* Left */}
           <div className="animate-fade-up">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs font-semibold text-primary">
               <CheckCircle className="h-3.5 w-3.5" /> Compatible con DNIT y SIFEN
             </span>
-            <h1 className="mt-6 text-3xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
               Facturá desde{" "}
               <span className="text-primary">WhatsApp</span> o desde la web.
             </h1>
-            <p className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <p className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Simple, rápido y seguro.
             </p>
-
 
             <p className="mt-6 max-w-xl text-base text-muted-foreground sm:text-lg">
               Factyble te permite emitir facturas, notas de crédito y consultar
@@ -122,7 +120,7 @@ function Landing() {
       </section>
 
       {/* Beneficios */}
-      <section id="beneficios" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
+      <section id="beneficios" className="mx-auto max-w-7xl px-6 py-24">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary">Beneficios clave</p>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
@@ -147,7 +145,7 @@ function Landing() {
 
       {/* Características */}
       <section id="caracteristicas" className="border-t border-border bg-gradient-to-b from-card/40 to-background">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
+        <div className="mx-auto max-w-7xl px-6 py-24">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-widest text-primary">Todo lo que necesitás</p>
@@ -200,7 +198,7 @@ function Landing() {
 
       {/* Stats */}
       <section className="border-t border-border">
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16">
+        <div className="mx-auto max-w-7xl px-6 py-16">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { icon: Users, value: "+10.000", label: "Empresas confían en nosotros" },
@@ -224,7 +222,7 @@ function Landing() {
 
       {/* Precios */}
       <section id="precios" className="border-t border-border bg-card/40">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+        <div className="mx-auto max-w-6xl px-6 py-24">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-semibold uppercase tracking-widest text-primary">Precios</p>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
@@ -277,7 +275,7 @@ function Landing() {
 
       {/* CTA */}
       <section id="trial" className="border-t border-border">
-        <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-5xl px-6 py-20">
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary to-[oklch(0.55_0.22_285)] p-10 text-center shadow-2xl shadow-primary/30 sm:p-16">
             <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-white/10 blur-2xl" />
             <div className="absolute -left-10 bottom-0 h-48 w-48 rounded-full bg-[oklch(0.85_0.15_60)]/30 blur-2xl" />
@@ -299,7 +297,7 @@ function Landing() {
 
       {/* Footer */}
       <footer id="contacto" className="border-t border-border bg-card/40">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 sm:py-16 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <Logo />
             <p className="mt-4 max-w-xs text-sm text-muted-foreground">
@@ -390,17 +388,14 @@ function FooterCol({ title, links }: { title: string; links: string[] }) {
 
 function HeroMockup() {
   return (
-    <div className="relative mx-auto w-full max-w-xl flex items-center justify-center lg:max-w-none lg:-mr-16 xl:-mr-40 animate-float drop-shadow-2xl">
-      <img
-        src="/assets/notebookPhone.png"
-        alt="Notebook y teléfono mostrando Factyble"
-        loading="eager"
-        decoding="sync"
-        fetchPriority="high"
-        className="relative z-10 w-full h-auto object-contain lg:w-[120%] xl:w-[140%] animate-fade-up drop-shadow-2xl"
-      />
-    </div>
+    <div className="relative mx-auto w-full flex items-center justify-center object-contain animate-float drop-shadow-2xl">
+  <img
+    src="/assets/notebookPhone.png"
+    alt="Notebook y teléfono mostrando Factyble"
+    className="relative z-10 w-full h-auto max-w-[120%] object-contain animate-fade-up drop-shadow-2xl"
+  />
+</div>
+
   );
 }
-
 

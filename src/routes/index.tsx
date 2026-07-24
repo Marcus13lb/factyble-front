@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import notebookPhone from "/assets/notebookPhone.png";
+import { FaWhatsapp } from "react-icons/fa";
 
 import {
   ArrowRight,
@@ -20,6 +20,7 @@ import {
   MapPin,
   CheckCircle,
   Monitor,
+  Smile,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -51,18 +52,14 @@ function Landing() {
             <a href="#caracteristicas" className="transition-colors hover:text-foreground">Características</a>
             <a href="#beneficios" className="transition-colors hover:text-foreground">Beneficios</a>
             <a href="#precios" className="transition-colors hover:text-foreground">Precios</a>
-            <a href="#integraciones" className="transition-colors hover:text-foreground">Integraciones</a>
             <a href="#contacto" className="transition-colors hover:text-foreground">Contacto</a>
           </nav>
           <div className="flex items-center gap-3">
-            <a href="#login" className="hidden text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:inline">
-              Iniciar sesión
-            </a>
             <a
               href="#demo"
               className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/40"
             >
-              Solicitar demo <ArrowRight className="h-4 w-4" />
+              Contactanos <ArrowRight className="h-4 w-4" />
             </a>
           </div>
         </div>
@@ -92,19 +89,15 @@ function Landing() {
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
+              {/* Botón WhatsApp */}
               <a
-                href="#trial"
-                className="group inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/30 transition-all hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-primary/40"
+                href="https://wa.me/595981234567?text=Hola%20quiero%20más%20información"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#2EC4E6] px-5 py-2.5 text-white font-semibold shadow-md transition-all hover:shadow-lg hover:brightness-110"
               >
-                Probar gratis
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </a>
-              <a
-                href="#web"
-                className="group inline-flex items-center gap-2 rounded-xl border border-border bg-background px-6 py-3.5 text-sm font-semibold text-foreground transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg"
-              >
-                <Monitor className="h-4 w-4 text-primary" />
-                Ver versión web
+                <FaWhatsapp className="h-5 w-5" />
+                Hablar por WhatsApp
               </a>
             </div>
             <div className="mt-8 flex flex-wrap gap-6 text-sm">
@@ -158,8 +151,8 @@ function Landing() {
               </p>
               <ul className="mt-6 space-y-3">
                 {[
-                  "Emisión ilimitada de facturas y notas",
-                  "Multiempresa y multiusuario",
+                  "Gestión centralizada de datos",
+                  "Interfaz intuitiva y fácil de usar",
                   "Reportes en tiempo real",
                   "Integraciones con tu ERP o Excel",
                 ].map((f) => (
@@ -171,9 +164,6 @@ function Landing() {
                   </li>
                 ))}
               </ul>
-              <a href="#caracteristicas-todas" className="mt-8 inline-flex items-center gap-2 rounded-xl border border-primary/30 bg-primary/5 px-5 py-3 text-sm font-semibold text-primary transition-all hover:bg-primary/10">
-                Conocer todas las características <ArrowRight className="h-4 w-4" />
-              </a>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               {[
@@ -201,8 +191,8 @@ function Landing() {
         <div className="mx-auto max-w-7xl px-6 py-16">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: Users, value: "+10.000", label: "Empresas confían en nosotros" },
-              { icon: FileText, value: "+5M", label: "Facturas emitidas" },
+              { icon: Smile, value: "95%", label: "Nivel de satisfacción" },
+              { icon: FileText, value: "+10.000", label: "Transacciones realizadas" },
               { icon: ShieldCheck, value: "99.9%", label: "Disponibilidad garantizada" },
               { icon: Headphones, value: "24/7", label: "Soporte especializado" },
             ].map(({ icon: Icon, value, label }) => (
@@ -233,19 +223,16 @@ function Landing() {
           <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
             <div className="rounded-3xl border-2 border-primary bg-background p-8 shadow-2xl shadow-primary/15">
               <div className="flex items-center justify-between">
-                <h3 className="text-xl font-bold">Plan Pro</h3>
+                <h3 className="text-xl font-bold">Plan emprendedor</h3>
                 <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">Más popular</span>
               </div>
               <p className="mt-6">
-                <span className="text-5xl font-extrabold tracking-tight">Gs. 165.000</span>
+                <span className="text-5xl font-extrabold tracking-tight">Gs. 150.000</span>
                 <span className="text-muted-foreground"> / mes</span>
               </p>
               <p className="text-xs text-muted-foreground">IVA incluido</p>
-              <a href="#trial" className="mt-6 block rounded-xl bg-primary py-3.5 text-center text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:-translate-y-0.5 hover:shadow-xl">
-                Empezar 14 días gratis
-              </a>
               <ul className="mt-6 space-y-3 text-sm">
-                {["Documentos ilimitados", "Multiempresa", "WhatsApp oficial (Meta)", "Soporte prioritario", "Reportes y exportación"].map((f) => (
+                {["Hasta 150 documentos al mes", "WhatsApp oficial (Meta)", "Soporte prioritario", "Reportes y exportación"].map((f) => (
                   <li key={f} className="flex items-start gap-2">
                     <Check className="mt-0.5 h-4 w-4 flex-none text-primary" /> <span>{f}</span>
                   </li>
@@ -253,16 +240,12 @@ function Landing() {
               </ul>
             </div>
             <div className="rounded-3xl border border-border bg-background p-8">
-              <h3 className="text-xl font-bold">Plan Empresa</h3>
+              <h3 className="text-xl font-bold">Plan pro </h3>
               <p className="mt-6">
-                <span className="text-5xl font-extrabold tracking-tight">A medida</span>
+                <span className="text-5xl font-extrabold tracking-tight">Gs. 250.000</span>
               </p>
-              <p className="text-xs text-muted-foreground">Volúmenes altos e integraciones</p>
-              <a href="#contacto" className="mt-6 block rounded-xl border border-border py-3.5 text-center text-sm font-semibold transition-colors hover:bg-accent">
-                Contactar ventas
-              </a>
               <ul className="mt-6 space-y-3 text-sm">
-                {["API REST completa", "Webhooks en tiempo real", "SLA dedicado", "Onboarding personalizado", "Soporte 24/7"].map((f) => (
+                {["Documentos ilimitados", "SLA dedicado", "Onboarding personalizado", "Soporte 24/7"].map((f) => (
                   <li key={f} className="flex items-start gap-2">
                     <Check className="mt-0.5 h-4 w-4 flex-none text-primary" /> <span>{f}</span>
                   </li>
@@ -283,13 +266,13 @@ function Landing() {
               Empezá a facturar desde WhatsApp hoy
             </h2>
             <p className="relative mx-auto mt-4 max-w-xl text-primary-foreground/85">
-              14 días gratis. Sin tarjeta. Cancelás cuando quieras.
+              Todo lo que necesitás para empezar, en minutos.
             </p>
             <a
               href="#signup"
               className="relative mt-8 inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-primary shadow-xl transition-all hover:-translate-y-0.5"
             >
-              Crear cuenta gratis <ArrowRight className="h-4 w-4" />
+              Contactanos <ArrowRight className="h-4 w-4" />
             </a>
           </div>
         </div>
@@ -389,13 +372,22 @@ function FooterCol({ title, links }: { title: string; links: string[] }) {
 function HeroMockup() {
   return (
     <div className="relative mx-auto w-full flex items-center justify-center object-contain animate-float drop-shadow-2xl">
-  <img
-    src="/assets/notebookPhone.png"
-    alt="Notebook y teléfono mostrando Factyble"
-    className="relative z-10 w-full h-auto max-w-[120%] object-contain animate-fade-up drop-shadow-2xl"
-  />
-</div>
+      <img
+        src="/assets/notebookPhone.png"
+        alt="Notebook y teléfono mostrando Factyble"
+        className="relative z-10 w-full h-auto max-w-[120%] object-contain animate-fade-up drop-shadow-2xl"
+      />
+    </div>
 
   );
 }
+
+function WhatsAppIcon() {
+  return (
+    <div className="flex items-center justify-center h-10 w-10 rounded-full bg-green-500 text-white">
+      <FaWhatsapp className="h-6 w-6" />
+    </div>
+  );
+}
+
 

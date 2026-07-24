@@ -8,7 +8,6 @@ import {
   Percent,
   Eye,
   ShieldCheck,
-  Cloud,
   MessageCircle,
   Lock,
   Zap,
@@ -22,10 +21,14 @@ import {
   Monitor,
   Smile,
 } from "lucide-react";
+import { useState } from "react";
+
+
 
 export const Route = createFileRoute("/")({
   component: Landing,
 });
+
 
 function Logo() {
   return (
@@ -41,6 +44,11 @@ function Logo() {
 }
 
 function Landing() {
+
+  const handleClick = (section: string) => {
+    setActiveSection(section);
+  };
+  const [activeSection, setActiveSection] = useState("inicio");
   return (
     <div className="min-h-screen bg-[url('/assets/background.png')] bg-cover bg-center bg-fixed bg-no-repeat">
       {/* Header */}
@@ -48,15 +56,29 @@ function Landing() {
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4">
           <Logo />
           <nav className="hidden items-center gap-8 text-sm font-medium text-muted-foreground lg:flex">
-            <a href="#inicio" className="text-primary">Inicio</a>
-            <a href="#caracteristicas" className="transition-colors hover:text-foreground">Características</a>
-            <a href="#beneficios" className="transition-colors hover:text-foreground">Beneficios</a>
-            <a href="#precios" className="transition-colors hover:text-foreground">Precios</a>
-            <a href="#contacto" className="transition-colors hover:text-foreground">Contacto</a>
+            {[
+              { id: "inicio", label: "Inicio" },
+              { id: "caracteristicas", label: "Características" },
+              { id: "beneficios", label: "Beneficios" },
+              { id: "precios", label: "Precios" },
+              { id: "contacto", label: "Contacto" },
+            ].map(({ id, label }) => (
+              <a
+                key={id}
+                href={`#${id}`}
+                onClick={() => handleClick(id)}
+                className={`transition-colors hover:text-[#2EC4E6] ${activeSection === id ? "text-[#2EC4E6] font-semibold" : "text-gray-600"
+                  }`}
+              >
+                {label}
+              </a>
+            ))}
           </nav>
           <div className="flex items-center gap-3">
             <a
-              href="#demo"
+              href="https://wa.me/595976788698?text=Hola%20quiero%20más%20información"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/40"
             >
               Contactanos <ArrowRight className="h-4 w-4" />
@@ -91,7 +113,7 @@ function Landing() {
             <div className="mt-10 flex flex-wrap items-center gap-4">
               {/* Botón WhatsApp */}
               <a
-                href="https://wa.me/595981234567?text=Hola%20quiero%20más%20información"
+                href="https://wa.me/595976788698?text=Hola%20quiero%20más%20información"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl bg-[#2EC4E6] px-5 py-2.5 text-white font-semibold shadow-md transition-all hover:shadow-lg hover:brightness-110"
@@ -212,7 +234,7 @@ function Landing() {
 
       {/* Precios */}
       <section id="precios" className="border-t border-border bg-card/40">
-        <div className="mx-auto max-w-6xl px-6 py-24">
+        <div className="mx-auto max-w-7xl px-6 py-24">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-semibold uppercase tracking-widest text-primary">Precios</p>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
@@ -220,34 +242,87 @@ function Landing() {
             </h2>
             <p className="mt-4 text-muted-foreground">Sin sorpresas. Cancelás cuando quieras.</p>
           </div>
-          <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
-            <div className="rounded-3xl border-2 border-primary bg-background p-8 shadow-2xl shadow-primary/15">
+
+         
+          <div className="mx-auto mt-12 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+            {/* Plan emprendedor */}
+            <div className="flex flex-col justify-between rounded-3xl border-2 border-[#2EC4E6] bg-white p-8 shadow-2xl shadow-[#2EC4E6]/20 scale-105 transition-all hover:-translate-y-1 hover:shadow-xl">
               <div className="flex items-center justify-between">
                 <h3 className="text-xl font-bold">Plan emprendedor</h3>
-                <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">Más popular</span>
+                <span className="rounded-full bg-[#2EC4E6]/10 px-3 py-1 text-xs font-semibold text-[#2EC4E6]">Más popular</span>
               </div>
               <p className="mt-6">
-                <span className="text-5xl font-extrabold tracking-tight">Gs. 150.000</span>
+                <span className="text-3xl font-extrabold tracking-tight">Gs. 49.000</span>
                 <span className="text-muted-foreground"> / mes</span>
               </p>
-              <p className="text-xs text-muted-foreground">IVA incluido</p>
               <ul className="mt-6 space-y-3 text-sm">
-                {["Hasta 150 documentos al mes", "WhatsApp oficial (Meta)", "Soporte prioritario", "Reportes y exportación"].map((f) => (
+                {["Hasta 50 facturas", "WhatsApp oficial (Meta)", "Soporte prioritario", "Reportes y exportación"].map((f) => (
                   <li key={f} className="flex items-start gap-2">
-                    <Check className="mt-0.5 h-4 w-4 flex-none text-primary" /> <span>{f}</span>
+                    <Check className="mt-0.5 h-4 w-4 flex-none text-[#2EC4E6]" /> <span>{f}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="rounded-3xl border border-border bg-background p-8">
-              <h3 className="text-xl font-bold">Plan pro </h3>
+
+            {/* Plan pyme */}
+            <div className="flex flex-col justify-between rounded-3xl border border-border bg-white p-8 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl">
+              <h3 className="text-xl font-bold">Plan pyme</h3>
               <p className="mt-6">
-                <span className="text-5xl font-extrabold tracking-tight">Gs. 250.000</span>
+                <span className="text-3xl font-extrabold tracking-tight">Gs. 99.000</span>
+                <span className="text-muted-foreground"> / mes</span>
               </p>
               <ul className="mt-6 space-y-3 text-sm">
                 {["Documentos ilimitados", "SLA dedicado", "Onboarding personalizado", "Soporte 24/7"].map((f) => (
                   <li key={f} className="flex items-start gap-2">
-                    <Check className="mt-0.5 h-4 w-4 flex-none text-primary" /> <span>{f}</span>
+                    <Check className="mt-0.5 h-4 w-4 flex-none text-[#2EC4E6]" /> <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Plan negocio */}
+            <div className="flex flex-col justify-between rounded-3xl border border-border bg-white p-8 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl">
+              <h3 className="text-xl font-bold">Plan negocio</h3>
+              <p className="mt-6">
+                <span className="text-3xl font-extrabold tracking-tight">Gs. 189.000</span>
+                <span className="text-muted-foreground"> / mes</span>
+              </p>
+              <ul className="mt-6 space-y-3 text-sm">
+                {["Documentos ilimitados", "SLA dedicado", "Onboarding personalizado", "Soporte 24/7"].map((f) => (
+                  <li key={f} className="flex items-start gap-2">
+                    <Check className="mt-0.5 h-4 w-4 flex-none text-[#2EC4E6]" /> <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Plan empresa */}
+            <div className="flex flex-col justify-between rounded-3xl border border-border bg-white p-8 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl">
+              <h3 className="text-xl font-bold">Plan empresa</h3>
+              <p className="mt-6">
+                <span className="text-3xl font-extrabold tracking-tight">Gs. 349.000</span>
+                <span className="text-muted-foreground"> / mes</span>
+              </p>
+              <ul className="mt-6 space-y-3 text-sm">
+                {["Documentos ilimitados", "SLA dedicado", "Onboarding personalizado", "Soporte 24/7"].map((f) => (
+                  <li key={f} className="flex items-start gap-2">
+                    <Check className="mt-0.5 h-4 w-4 flex-none text-[#2EC4E6]" /> <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Plan corporativo */}
+            <div className="flex flex-col justify-between rounded-3xl border border-border bg-white p-8 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl">
+              <h3 className="text-xl font-bold">Plan corporativo</h3>
+              <p className="mt-6">
+                <span className="text-3xl font-extrabold tracking-tight">Gs. 499.000</span>
+                <span className="text-muted-foreground"> / mes</span>
+              </p>
+              <ul className="mt-6 space-y-3 text-sm">
+                {["Documentos ilimitados", "SLA dedicado", "Onboarding personalizado", "Soporte 24/7"].map((f) => (
+                  <li key={f} className="flex items-start gap-2">
+                    <Check className="mt-0.5 h-4 w-4 flex-none text-[#2EC4E6]" /> <span>{f}</span>
                   </li>
                 ))}
               </ul>
@@ -256,7 +331,6 @@ function Landing() {
         </div>
       </section>
 
-      {/* CTA */}
       <section id="trial" className="border-t border-border">
         <div className="mx-auto max-w-5xl px-6 py-20">
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary to-[oklch(0.55_0.22_285)] p-10 text-center shadow-2xl shadow-primary/30 sm:p-16">
@@ -269,11 +343,15 @@ function Landing() {
               Todo lo que necesitás para empezar, en minutos.
             </p>
             <a
-              href="#signup"
+              href="https://wa.me/595976788698?text=Hola%20quiero%20más%20información"
+              target="_blank"
+              rel="noopener noreferrer"
               className="relative mt-8 inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-primary shadow-xl transition-all hover:-translate-y-0.5"
             >
-              Contactanos <ArrowRight className="h-4 w-4" />
+              <FaWhatsapp className="h-5 w-5" />
+              Contactanos
             </a>
+
           </div>
         </div>
       </section>
@@ -292,8 +370,7 @@ function Landing() {
           <div>
             <h4 className="text-sm font-bold">Contacto</h4>
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
-              <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /> hola@factyble.com</li>
-              <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-primary" /> +595 981 000 000</li>
+              <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-primary" /> +595 976 788 698</li>
               <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /> Asunción, Paraguay</li>
             </ul>
           </div>
